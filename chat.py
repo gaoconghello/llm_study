@@ -1,34 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-"""
-文件名: chat_with_memory.py
-功能描述: 
-    这是一个基于 OpenAI API 的智能对话程序，具有记忆功能（保存对话历史）。
-    程序可以与 AI 模型进行多轮对话，并在对话过程中保持上下文的连贯性。
-
-主要功能:
-    1. 支持与 AI 模型进行自然语言对话
-    2. 维护完整的对话历史，使 AI 能够理解上下文
-    3. 使用流式响应，实时显示 AI 回复
-    4. 支持自定义 API 设置（通过环境变量配置）
-
-使用方法:
-    1. 设置环境变量：
-       - LLM_API_KEY: OpenAI API 密钥
-       - LLM_BASE_URL: API 基础 URL
-    2. 导入并使用 chat_with_memory 函数进行对话
-
-依赖项:
-    - openai: OpenAI Python 客户端
-    - os: 用于读取环境变量
-
-作者: [您的名字]
-创建日期: [创建日期]
-最后修改: [最后修改日期]
-版本: 1.0.0
-"""
-
 from openai import OpenAI
 import os
 import json
@@ -71,10 +43,10 @@ def chat_with_memory(input_content):
     # 调用 OpenAI API 创建对话补全
     # stream=True 启用流式响应，可以逐步获取 AI 的回复
     response = client.chat.completions.create(
-        model='qiaoban_bc',  # 使用 vLLM 服务器中配置的模型名称
+        model='GLM-Z1-9B-0414',  # 使用 vLLM 服务器中配置的模型名称
         messages=messages,
         stream=True,                      # 启用流式输出
-        max_tokens=2048,                  # 限制最大输出长度
+        max_tokens=4096,                  # 限制最大输出长度
         temperature=0.7                   # 控制回复的随机性
     )
 
