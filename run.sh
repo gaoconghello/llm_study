@@ -2,7 +2,6 @@
 
 # --- 设置模型缓存目录 ---
 export HF_HOME="/workspace/.cache"
-export TRANSFORMERS_CACHE="/workspace/.cache/transformers"
 export HF_DATASETS_CACHE="/workspace/.cache/datasets"
 
 # --- 模型和服务器配置 ---
