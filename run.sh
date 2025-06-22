@@ -6,9 +6,9 @@ export TRANSFORMERS_CACHE="/workspace/.cache/transformers"
 export HF_DATASETS_CACHE="/workspace/.cache/datasets"
 
 # --- 模型和服务器配置 ---
-MODEL_NAME="ZhipuAI/glm-4-9b-chat"
+MODEL_NAME="tomxyz/qiaoban_bc"
 # 客户端将通过这个名称来调用模型
-SERVER_MODEL_NAME="glm-4-9b-chat"
+SERVER_MODEL_NAME="qiaoban_bc"
 # 端口号
 PORT=8000
 
