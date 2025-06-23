@@ -20,7 +20,6 @@ echo "端口: $PORT"
 python -m vllm.entrypoints.openai.api_server \
     --model "$MODEL_NAME" \
     --served-model-name "$SERVER_MODEL_NAME" \
-    --max-model-len 8192 \
-    --gpu-memory-utilization 0.9 \
-    --port "$PORT" \
-    --trust-remote-code
+    --max-model-len 4096 \
+    --gpu-memory-utilization 0.8 \
+    --port "$PORT" 
