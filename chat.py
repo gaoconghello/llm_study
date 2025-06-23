@@ -77,7 +77,7 @@ def chat_with_memory(input_content):
     # 调用 OpenAI API 创建对话补全
     # stream=True 启用流式响应，可以逐步获取 AI 的回复
     response = client.chat.completions.create(
-        model='GLM-Z1-9B-0414',  # 使用 vLLM 服务器中配置的模型名称
+        model='THUDM/GLM-4-9B-0414',  # 使用 vLLM 服务器中配置的模型名称
         messages=messages,
         stream=True,                      # 启用流式输出
         max_tokens=4096,                  # 限制最大输出长度

@@ -5,9 +5,9 @@ export HF_HOME="/workspace/.cache"
 export HF_DATASETS_CACHE="/workspace/.cache/datasets"
 
 # --- 模型和服务器配置 ---
-MODEL_NAME="THUDM/GLM-Z1-9B-0414"
+MODEL_NAME="/THUDM/GLM-4-9B-0414"
 # 客户端将通过这个名称来调用模型
-SERVER_MODEL_NAME="GLM-Z1-9B-0414"
+SERVER_MODEL_NAME="THUDM/GLM-4-9B-0414"
 # 端口号
 PORT=8000
 
